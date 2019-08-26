@@ -1,0 +1,144 @@
+.registrationForm__description {
+  text-align: center;
+}
+
+.registrationForm {
+  --mainColor: #52a6de;
+  --warningColor: #de5252;
+  font-size: 1.5rem;
+  width: 60vw;
+  margin: 1em auto;
+  border-radius: 1em;
+  padding: 1em;
+  box-shadow: 0 0 1em 10px var(--mainColor);
+}
+
+.registrationForm__label {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+.registrationForm__labelBio {
+  width: 100%;
+  padding-bottom: 0.5em;
+}
+
+.registrationForm__input, .registrationForm__select, .registrationForm__textarea {
+  width: 50%;
+  font-size: 1em;
+}
+
+.registrationForm__input--warning:focus, .registrationForm__select--warning:focus {
+  box-shadow: none;
+}
+
+.registrationForm__input--warning, .registrationForm__select--warning {
+  box-shadow: 0 0 10px 1px var(--warningColor);
+}
+
+.registrationForm__textarea {
+  width: 100%;
+  height: 4em;
+}
+
+.registrationForm__span--information {
+  color: gray;
+  font-size: 0.65em;
+}
+
+.registrationForm__span--warning {
+  color: var(--warningColor);
+  font-size: 0.65em;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+}
+
+.registrationForm__submitButton:hover {
+  cursor: pointer;
+  color: var(--mainColor);
+  background-color: white;
+}
+
+.registrationForm__submitButton {
+  width: 50%;
+  height: 3em;
+  display: block;
+  margin: auto;
+  background-color: var(--mainColor);
+  color: white;
+  font-size: 1em;
+  border-radius: 90px;
+  border-color: var(--mainColor);
+  border-width: 5px;
+}
+
+.registrationForm__switch {
+  position: relative;
+  height: 32px;
+  width: 96px;
+  display: inline-block;
+}
+
+.registrationForm__switch input {
+  display: none;
+}
+
+.registrationForm__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #a9a9ce;
+  border-radius: 26px;
+  transition: 0.4s;
+}
+
+.registrationForm__slider::before {
+  position: absolute;
+  content: '';
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: #888888;
+  top: -8px;
+  transition: 0.4s;
+}
+
+input:checked + .registrationForm__slider::before {
+  background-color: var(--mainColor);
+  transform: translateX(48px);
+}
+
+@media screen and (max-width: 1000px) {
+  .registrationForm {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .registrationForm {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .registrationForm__label, .registrationForm__input {
+    width: 100%;
+  }
+
+  .registrationForm__labelGender {
+    width: 50%;
+  }
+
+  #jobPosition {
+    width: 100%;
+  }
+
+  .registrationForm__textarea {
+    height: 5em;
+  }
+}
